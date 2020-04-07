@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>爱心日食</title>
+        <style>
+body {
+    margin: 0;
+    animation: colorChange 6s linear infinite alternate;
+}
+ 
+.wrap {
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+}
+ 
+.love {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+ 
+.left, .right {
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    background-color: yellow;
+    border-radius: 50px 50px 0 0;
+}
+ 
+.left {
+    top: 0;
+    left: 0;
+    transform: rotate(315deg);
+}
+ 
+.right {
+    top: 0;
+    left: 0;
+    transform: translateX(42px) rotate(45deg);
+}
+ 
+.love:nth-child(2) {
+    transform: translateX(200px)
+            translateY(-200px);
+    animation: move 6s linear infinite alternate;
+}
+ 
+.love:nth-child(2)
+            .left, .love:nth-child(2) .right {
+    animation: colorChange 6s linear infinite
+            alternate;
+}
+ 
+@keyframes move {
+    0% {
+        transform: translateX(200px) translateY(-200px);
+    }
+ 
+    100% {
+        transform: translateX(-200px) translateY(-200px);
+    }
+}
+ 
+@keyframes
+            colorChange {
+    0% {
+        background-color: skyblue;
+    }
+ 
+    50% {
+        background-color: #000;
+    }
+ 
+    100% {
+        background-color: skyblue;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="love">
+                <div class="left">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+            <div class="love">
+                <div class="left">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+        </div>
+    </body>
+ 
+</html>

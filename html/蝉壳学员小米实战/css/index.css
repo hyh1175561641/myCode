@@ -1,0 +1,32 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,dt{
+    margin:0;
+    padding:0;
+}
+
+.topbar{
+    height:40px;
+
+    border:1px solid black;
+    aabackground-color:#333;
+}
+.container{
+    margin:0 auto;
+    width:1226px;
+
+    border:1px solid black;
+
+}
+.container::before, .container::after{
+    content:"";
+    display:table;
+}
+.container::after{
+    clear:both;
+}
+.topbar-nav{
+    float:left;
+}
+.topbar-info, .topbar-cart{
+    float:right;
+}
+

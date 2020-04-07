@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				background-color: #000;
+			}
+			.box{
+				position: relative;
+				width: 900px;
+				height: 100%;
+				margin: 0 auto;
+				background-color: #000;
+				border: 1px solid rgba(0,0,0,0);
+				overflow: hidden;
+				filter: contrast(20);
+			}
+			.energy-group{
+				background-color: #50b42f;
+				z-index: 1;
+			}
+			.ball{
+				position: relative;
+				width: 300px;
+				height: 300px;
+				margin: 20px auto 0;
+				background-color: #50b32e;
+				border-radius: 300px;
+				filter: blur(10px);
+				z-index: 1;
+			}
+			.edge{
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				background-color: #50b32e;
+				border-radius: 300px;
+				filter: blur(10px);
+				z-index: 1;
+			}
+			.dg1{
+				border-top-left-radius: 150px;
+				border-bottom-right-radius: 150px;
+				animation: rotate 10s infinite;
+			}
+			.dg2{
+				border-top-left-radius: 150px;
+				border-bottom-right-radius: 150px;
+				animation: rotate 8s infinite;
+			}
+			.dg3{
+				border-top-left-radius: 150px;
+				border-bottom-right-radius: 150px;
+				animation: rotate 12s infinite;
+			}
+			.energy-pool{
+				position: absolute;
+				/*bottom: -400px;
+				left: -50px;*/
+				width: 900px;
+				height: 500px;
+				background-color: #50b32e;
+				border-radius: 400px/150px;
+				transform: translateY(570px);
+				filter: blur(10px);
+				z-index: 1;
+			}
+			.content{
+				position: relative;
+				width: 250px;
+				height: 100%;
+				margin: 0 auto;
+				padding-top: 100px;
+			}
+			
+			.globule-1{
+				position: absolute;
+				left: 20px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				animation: yidong 5s infinite ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(5px);
+			}
+			.globule-2{
+				position: absolute;
+				left: 170px;
+				width: 90px;
+				height: 90px;
+				border-radius: 90px;
+				animation: yidong 9s infinite 3s ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(10px);
+			}
+			.globule-3{
+				position: absolute;
+				left: 20px;
+				width: 65px;
+				height: 65px;
+				border-radius: 65px;
+				animation: yidong 6s infinite 3s;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(5px);
+			}
+			.globule-4{
+				position: absolute;
+				left: 200px;
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				animation: yidong 4s infinite ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(6px);
+			}
+			.globule-5{
+				position: absolute;
+				left: 80px;
+				width: 70px;
+				height: 70px;
+				border-radius: 70px;
+				animation: yidong 7s infinite 2s ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(10px);
+			}
+			.globule-6{
+				position: absolute;
+				left: 125px;
+				width: 55px;
+				height: 55px;
+				border-radius: 55px;
+				animation: yidong 6s infinite 2s ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(10px);
+			}
+			.globule-7{
+				position: absolute;
+				left: 100px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				animation: yidong 5s infinite 3s ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(10px);
+			}
+			.globule-8{
+				position: absolute;
+				left: 100px;
+				width: 80px;
+				height: 80px;
+				border-radius: 80px;
+				animation: yidong 10s infinite ;
+				animation-timing-function: cubic-bezier(.01,.16,.18,1);
+				filter: blur(10px);
+			}
+			@keyframes yidong{
+				0%{
+					transform: translateY(0);
+					}
+				100%{
+					transform: translateY(-830px);
+				}
+			}
+			@keyframes rotate{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="ball">
+				<div class="edge dg1"></div>
+				<div class="edge dg2"></div>
+				<div class="edge dg3"></div>
+			</div>
+			<div class="energy-pool">
+				<div class="content">
+					<div class="energy-group globule-1"></div>
+					<div class="energy-group globule-2"></div>
+					<div class="energy-group globule-3"></div>
+					<div class="energy-group globule-4"></div>
+					<div class="energy-group globule-5"></div>
+					<div class="energy-group globule-6"></div>
+					<div class="energy-group globule-7"></div>
+					<div class="energy-group globule-8"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
